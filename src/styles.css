@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    /* nord color scheme
+    https://www.nordtheme.com/
+    */
+    --bg-lite: #eceff4;
+    --bg-mid: #e5e9f0;
+    --bg-dark: #d8dee9;
+
+    --fg-darkest: #2e3440;
+    --fg-dark: #3b4252;
+    --fg-mid: #434c5e;
+    --fg-lite: #4c566a;
+}
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--bg-light);
+}
