@@ -6,6 +6,7 @@
     /* nord color scheme
     https://www.nordtheme.com/
     */
+    --bg-default: white;
     --bg-lite: #eceff4;
     --bg-mid: #e5e9f0;
     --bg-dark: #d8dee9;
@@ -14,10 +15,12 @@
     --fg-dark: #3b4252;
     --fg-mid: #434c5e;
     --fg-lite: #4c566a;
+
+    --red: #bf616a;
 }
 body{
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
-    background-color: var(--bg-light);
+    background-color: var(--bg-default);
 }

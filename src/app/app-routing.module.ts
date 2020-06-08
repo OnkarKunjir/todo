@@ -7,7 +7,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   {path: '' , component: LandingPageComponent},
-  {path: 'account' , component: TodoComponent}, // chage to todo 
+  {path: 'todo' , component: TodoComponent},  
   {path :'sign-up' , component: SignUpComponent}
 ];
 

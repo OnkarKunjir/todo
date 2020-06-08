@@ -1,0 +1,24 @@
+.item{
+    background-color: var(--bg-default);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 6vh;
+    transition: ease-in-out 0.2s;
+}
+.item:hover{
+    transform: scale(1.01);
+    box-shadow: 3px 3px 5px 6px var(--bg-mid);
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.status , .title{
+    min-width: 30%;
+}
+.delete{
+    font-weight: 600;
+    color: var(--red);
+}

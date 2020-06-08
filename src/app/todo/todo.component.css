@@ -1,0 +1,16 @@
+.todo{
+    background-color: var(--bg-default);
+    min-height: 92vh;
+}
+.sep{
+    height: 30px;
+}
+.todo-items{
+    background-color: var(--bg-default);
+    max-width: 1700px;
+    margin: 20px auto 20px auto;
+}
+hr{
+    margin: 5px 50px 5px 50px;
+    border: 1px solid var(--bg-dark);
+}
