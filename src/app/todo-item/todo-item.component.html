@@ -1,6 +1,6 @@
 <div class="item">
-    <div class="finish">
-        <i class="far fa-square"></i>
+    <div  [ngClass]="setClass()" (click)="onFinish()">
+        <i class="fas fa-stop"></i>
     </div>
     <div class="title">
         {{ todo.title }}
@@ -8,7 +8,7 @@
     <div class="status">
         {{ todo.status }}
     </div>
-    <div class="delete">
+    <div (click)="onDelete()" class="delete">
         <i class="fas fa-trash"></i>
     </div>
 </div>

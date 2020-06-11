@@ -7,14 +7,17 @@ export class TodoService {
 
   todos = [
     {
+      'id':'1',
       'title':'Finish frontend',
-      'status':'Working'
+      'status':'finished'
     },
     {
+      'id':'2',
       'title':'Finish backend',
       'status':'Yet to start'
     },
     {
+      'id':'3',
       'title':'Make it secure',
       'status':'Yet to start'
     }

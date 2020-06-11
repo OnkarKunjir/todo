@@ -1,7 +1,14 @@
 <div class="todo">
     <div class="sep"></div>
     <div class="todo-items" *ngFor="let todo of todos;last as isLast">
-        <app-todo-item [todo]=todo></app-todo-item>
+        
+        <app-todo-item 
+        [todo]="todo" 
+        (deleteTodo)="deleteTodo($event)"
+        (finishTodo)="finishTodo($event)"
+        >
+        </app-todo-item>
+
         <hr *ngIf="!isLast">
     </div>
 

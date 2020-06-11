@@ -18,11 +18,19 @@
 .status , .title{
     min-width: 30%;
 }
-.finish{
-    cursor: pointer;
-}
-.delete{
+.finish , .delete{
+    color: var(--bg-dark);
     cursor: pointer;
     font-weight: 600;
+    transition: ease-in 0.3s;
+    padding: 10px;
+}
+.finished{
+    color: var(--green);
+}
+.finish:hover{
+    color: var(--green);
+}
+.delete:hover{
     color: var(--red);
 }
