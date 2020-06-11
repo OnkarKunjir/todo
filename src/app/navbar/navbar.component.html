@@ -3,16 +3,16 @@
         <a routerLink="/">TODO</a>
     </div>
 
-    <div class="burger nav-item">
+    <div (click)="toggle()" class="burger nav-item">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
 
-    <ul class="navlinks nav-item">
-        <li><a routerLink="/todo">Todo</a></li>
-        <li><a routerLink="/account">My Account</a></li>
-        <li><a routerLink="/sign-up">Log out</a></li>
+    <ul [@openClose]="isOpen ? 'open' : 'closed'" class="nav-item navlinks" id="navlinks">
+        <li><a (click)="toggle()" routerLink="/todo">Todo</a></li>
+        <li><a (click)="toggle()" routerLink="/account">My Account</a></li>
+        <li><a (click)="toggle()" routerLink="/sign-up">Log out</a></li>
     </ul>
     
 </nav>

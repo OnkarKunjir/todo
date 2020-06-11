@@ -14,3 +14,13 @@ hr{
     margin: 5px 50px 5px 50px;
     border: 1px solid var(--bg-dark);
 }
+
+.empty{
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    font-size: 9rem;
+    color: var(--bg-dark);
+}

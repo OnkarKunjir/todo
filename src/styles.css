@@ -1,6 +1,27 @@
+/* animations */
+@keyframes slidein-rtl{
+    from{
+        transform: translate(100% , 0%);
+    }
+    to{
+        transform: translate(0% , 0%);
+    }
+}
+@keyframes slideout-lte{
+    from{
+        transform: translate(0% , 0%);
+    }
+    to{
+        transform: translate(100% , 0%);
+    }
+}
+
 *{
     margin: 0px;
     padding: 0px;
+}
+.hidden{
+    display: none;
 }
 :root{
     /* nord color scheme

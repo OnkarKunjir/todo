@@ -18,7 +18,11 @@
 .status , .title{
     min-width: 30%;
 }
+.finish{
+    cursor: pointer;
+}
 .delete{
+    cursor: pointer;
     font-weight: 600;
     color: var(--red);
 }
