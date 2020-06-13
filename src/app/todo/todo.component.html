@@ -1,5 +1,4 @@
-<div class="todo">
-    <div class="sep"></div>
+<div class="todo content">
     <div class="todo-items" *ngFor="let todo of todos;last as isLast">
         
         <app-todo-item 
@@ -12,8 +11,8 @@
         <hr *ngIf="!isLast">
     </div>
 
-    <div *ngIf="!todos.length" class="empty">
-        <i class="fas fa-tasks"></i>
-    </div>
+    <span *ngIf="!todos.length" class="material-icons empty">
+        playlist_add_check
+    </span>
     
 </div>

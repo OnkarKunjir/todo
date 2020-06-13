@@ -19,6 +19,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 .hidden{
     display: none;
@@ -35,9 +36,11 @@
     --fg-darkest: #2e3440;
     --fg-dark: #3b4252;
     --fg-mid: #434c5e;
-    --fg-lite: #4c566a;
+    --fg-lite: #616d85;
 
     --red: #bf616a;
+    --blue: #88c0d0;
+    --orange: #d08770;
     --green: #a3be8c;
 }
 body{
@@ -45,4 +48,9 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     background-color: var(--bg-default);
+}
+
+.content{
+    padding-top: 130px;
+    padding-left: 100px;
 }

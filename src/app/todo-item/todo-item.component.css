@@ -7,10 +7,6 @@
     min-height: 6vh;
     transition: ease-in-out 0.2s;
 }
-.item:hover{
-    transform: scale(1.01);
-    box-shadow: 3px 3px 5px 6px var(--bg-mid);
-}
 .title{
     font-size: 1.3rem;
     font-weight: 500;
@@ -21,7 +17,7 @@
 .finish , .delete{
     color: var(--bg-dark);
     cursor: pointer;
-    font-weight: 600;
+    font-size: 30px;
     transition: ease-in 0.3s;
     padding: 10px;
 }

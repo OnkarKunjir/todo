@@ -1,14 +1,14 @@
 <div class="item">
-    <div  [ngClass]="setClass()" (click)="onFinish()">
-        <i class="fas fa-stop"></i>
-    </div>
+    <span [ngClass]="setClass()" (click)="onFinish()" class="material-icons">
+            check_box
+    </span>
     <div class="title">
         {{ todo.title }}
     </div>
     <div class="status">
         {{ todo.status }}
     </div>
-    <div (click)="onDelete()" class="delete">
-        <i class="fas fa-trash"></i>
-    </div>
+    <span (click)="onDelete()" class="material-icons delete">
+        delete
+    </span>
 </div>

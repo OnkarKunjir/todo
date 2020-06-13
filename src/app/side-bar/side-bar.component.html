@@ -1,0 +1,28 @@
+<div class="side-bar">
+    <ul class="navlinks" id="navlinks">
+        <li>
+            <a (click)="updateActive($event)" class="link active" routerLink="/">
+                <span class="link-icon material-icons">
+                    home
+                </span>
+                <p class="link-text">Home</p>
+            </a>
+        </li> 
+        <li>
+            <a (click)="updateActive($event)" class="link" routerLink="/todo">
+                <span class="link-icon material-icons">
+                    format_list_bulleted
+                </span>
+                <p class="link-text">TODOS</p>
+            </a>
+        </li>   
+        <li>
+            <a (click)="updateActive($event)" class="link" routerLink="/">
+                <span class="link-icon material-icons">
+                    person
+                </span>
+                <p class="link-text">Account</p>
+            </a>
+        </li>
+    </ul>
+</div>

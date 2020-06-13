@@ -1,26 +1,19 @@
 .todo{
+    /* max-width: 1700px; */
+    width: 90%;
     background-color: var(--bg-default);
     min-height: 92vh;
-}
-.sep{
-    height: 30px;
-}
-.todo-items{
-    background-color: var(--bg-default);
-    max-width: 1700px;
-    margin: 20px auto 20px auto;
 }
 hr{
     margin: 5px 50px 5px 50px;
     border: 1px solid var(--bg-dark);
 }
-
 .empty{
     user-select: none;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50% , -50%);
-    font-size: 9rem;
+    font-size: 250px;
     color: var(--bg-dark);
 }

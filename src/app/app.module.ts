@@ -10,6 +10,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
     LandingPageComponent,
     SignUpComponent,
     TodoComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
