@@ -17,3 +17,8 @@ hr{
     font-size: 250px;
     color: var(--bg-dark);
 }
+@media only screen and (max-width: 1000px) {
+    .content{
+        width: 100vw;
+    }
+}

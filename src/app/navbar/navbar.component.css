@@ -42,3 +42,9 @@ nav a{
 .burger:hover{
     background-color: var(--bg-dark);
 }
+
+@media only screen and (max-width: 1000px) {
+    .burger{
+        display: inline-block;
+    }
+}

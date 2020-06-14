@@ -10,7 +10,7 @@
     top: 90px;
     z-index: 1;
     height: 92vh;
-    max-width: 400px;
+    /* max-width: 400px; */
     width: 80px;
     background-color: var(--bg-default);
     transition: ease-in-out 0.3s;
@@ -48,4 +48,16 @@
     font-weight: 500;
     margin: auto;
     margin-left: 40px;
+}
+.side-bar.mobile-active{
+    text-align: center;
+    display: block;
+    width: 400px;
+    box-shadow: 1px 20px 10px 3px var(--fg-lite);
+}
+
+@media only screen and (max-width: 1000px) {
+    .side-bar{
+        display: none;
+    }
 }

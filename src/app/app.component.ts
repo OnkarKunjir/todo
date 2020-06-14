@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+  isMobileActive: boolean = false;
+
+  toggleMobile(){
+    this.isMobileActive = !this.isMobileActive;
+  }
 }

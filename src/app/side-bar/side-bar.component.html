@@ -1,9 +1,11 @@
-<div class="side-bar">
+<div [ngClass]="setClass()"
+>
+
     <ul class="navlinks" id="navlinks">
         <li>
             <a (click)="updateActive($event)" class="link active" routerLink="/">
                 <span class="link-icon material-icons">
-                    home
+                    home 
                 </span>
                 <p class="link-text">Home</p>
             </a>

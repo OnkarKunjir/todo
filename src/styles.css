@@ -54,3 +54,10 @@ body{
     padding-top: 130px;
     padding-left: 100px;
 }
+@media only screen and (max-width: 1000px) {
+    .content{
+        width: 100vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
