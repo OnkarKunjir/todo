@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { TodoComponent } from './todo/todo.component';
 import { TodoItemComponent } from './todo-item/todo-item.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { StatusSelectorComponent } from './status-selector/status-selector.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     SignUpComponent,
     TodoComponent,
     TodoItemComponent,
-    SideBarComponent
+    SideBarComponent,
+    StatusSelectorComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+.status{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 200px;
+    transition: ease-in-out 0.2s;
+}
+
+.status:hover{
+    background-color: var(--bg-lite);
+}
+
+.option-icon{
+    font-size: 30px;
+    margin-left: auto;
+}
+
+.psychology{
+    color: var(--blue);
+}
+.assistant_photo{
+    color: var(--green);
+}
+.hourglass_bottom{
+    color: var(--yellow);
+}

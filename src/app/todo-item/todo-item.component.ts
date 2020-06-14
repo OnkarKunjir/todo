@@ -22,6 +22,14 @@ export class TodoItemComponent implements OnInit {
     };
   }
 
+  updateStatus(status){
+    if(this.todo.status == status && status == 'Finished'){
+      status = 'Yet to start';
+    }
+    this.todo.status = status;
+    this.updateTodo.emit(this.todo);
+  }
+
   onFinish(){
     this.updateTodo.emit(this.todo);
   }

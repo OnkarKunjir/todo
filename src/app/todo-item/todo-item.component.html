@@ -1,13 +1,24 @@
 <div class="item">
-    <span [ngClass]="setClass()" (click)="onFinish()" class="material-icons">
+
+    <span 
+    [ngClass]="setClass()" 
+    (click)="updateStatus('Finished')" 
+    class="material-icons">
             check_box
     </span>
+
     <div class="title">
         {{ todo.title }}
     </div>
-    <div class="status">
-        {{ todo.status }}
-    </div>
+    
+    
+    <app-status-selector 
+    [selectedStatus]="todo.status" 
+    (newStatus) = "updateStatus($event)"
+    class="status" >
+    </app-status-selector>
+
+
     <span (click)="onDelete()" class="material-icons delete">
         delete
     </span>
