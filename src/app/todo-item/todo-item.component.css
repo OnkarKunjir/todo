@@ -15,6 +15,7 @@
     min-width: 30%;
 }
 .finish , .delete{
+    user-select: none;
     color: var(--bg-dark);
     cursor: pointer;
     font-size: 30px;

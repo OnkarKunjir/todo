@@ -9,7 +9,7 @@ export class TodoService {
     {
       'id':'1',
       'title':'Finish frontend',
-      'status':'finished'
+      'status':'Finished'
     },
     {
       'id':'2',
@@ -26,6 +26,29 @@ export class TodoService {
   constructor() { }
 
   featchTodo(){
+    return this.todos;
+  }
+
+  deleteTodo(todo){
+    this.todos = this.todos.filter( t => t.id != todo.id );
+    return this.todos;
+  }
+
+  updateTodo(todo){
+    if(todo.status != 'Finished'){
+      this.todos.forEach((t)=>{
+        if(t.id == todo.id){
+          t.status = 'Finished';
+        }
+      });
+    }
+    else{
+      this.todos.forEach((t)=>{
+        if(t.id == todo.id){
+          t.status = 'Yet to start';
+        }
+      });
+    }
     return this.todos;
   }
 }

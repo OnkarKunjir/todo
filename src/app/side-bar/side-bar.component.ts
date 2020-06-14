@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import {  Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -10,12 +10,13 @@ import { Router } from '@angular/router';
 
 export class SideBarComponent implements OnInit {
   @Input()isMobileActive:boolean = false;
-  constructor(private router:Router) {
+  constructor(private route:ActivatedRoute) { }
+
+  ngOnInit(): void { 
    }
 
-  ngOnInit(): void {  }
-
   setClass(){
+    
     return {
       'side-bar' : true,
       'mobile-active' : this.isMobileActive

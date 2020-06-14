@@ -6,9 +6,9 @@ import { Component, OnInit, Input, EventEmitter , Output } from '@angular/core';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-  @Input('todo')todo;
+  @Input()todo;
   @Output() deleteTodo : EventEmitter<any> = new EventEmitter();  
-  @Output() finishTodo : EventEmitter<any> = new EventEmitter();
+  @Output() updateTodo : EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -18,12 +18,12 @@ export class TodoItemComponent implements OnInit {
   setClass(){
     return {
       'finish':true,
-      'finished':this.todo.status == 'finished'
+      'finished':this.todo.status == 'Finished'
     };
   }
 
   onFinish(){
-    this.finishTodo.emit(this.todo);
+    this.updateTodo.emit(this.todo);
   }
   onDelete(){
     this.deleteTodo.emit(this.todo);
