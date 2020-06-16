@@ -6,23 +6,7 @@ import { Observable, Subject } from 'rxjs';
 })
 export class TodoService {
 
-  todos = [
-    {
-      'id':'1',
-      'title':'Finish frontend',
-      'status':'Working'
-    },
-    {
-      'id':'2',
-      'title':'Finish backend',
-      'status':'Yet to start'
-    },
-    {
-      'id':'3',
-      'title':'Make it secure',
-      'status':'Yet to start'
-    }
-  ];
+  todos;
 
   todoChange: Subject<any> = new Subject<string>();
 
@@ -30,6 +14,23 @@ export class TodoService {
 
   featchTodo(){
     // featch the todos from the server
+    this.todos = [
+      {
+        'id':'1',
+        'title':'Finish frontend',
+        'status':'Working'
+      },
+      {
+        'id':'2',
+        'title':'Finish backend',
+        'status':'Yet to start'
+      },
+      {
+        'id':'3',
+        'title':'Make it secure',
+        'status':'Yet to start'
+      }
+    ];
     this.todoChange.next(this.todos);
   }
 
@@ -50,8 +51,14 @@ export class TodoService {
   }
 
   search(query){
-    let re = new RegExp(query , 'i');
-    this.todos = this.todos.filter( t =>  t.title.search(re) > -1 );
-    this.todoChange.next(this.todos);
+    // INCOMPLETE
+    if(query.length > 0){
+      let re = new RegExp(query , 'i');
+      this.todos = this.todos.filter( t =>  t.title.search(re) > -1 );
+      this.todoChange.next(this.todos);
+    }
+    else{
+      this.featchTodo();
+    }
   }
 }
