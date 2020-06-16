@@ -43,6 +43,10 @@
     --yellow: #ebcb8b;
     --green: #a3be8c;
 }
+::selection{
+    color: var(--fg-darkest);
+    background-color: var(--bg-dark);
+}
 html{
     scroll-behavior: smooth;
 }
