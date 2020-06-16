@@ -7,7 +7,7 @@
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
 }
 .text-section{
     width: 50%;
@@ -68,14 +68,16 @@
     min-height: 100vh;
     width: 100%;
 }
+h3{
+    font-size: 1.9rem;
+    font-weight: 400;
+}
 .ui-section{
     position: relative;
     /* height: 100vh; */
     overflow: hidden;
 }
 .ui-section h3{
-    font-size: 1.9rem;
-    font-weight: 400;
     text-align: center;
     padding: 30px;
 }
@@ -115,4 +117,53 @@
 }
 .ui-section img:hover ~ .bottom{
     transform: rotate(-45deg) translate(0% , 0%);
+}
+
+/* reasons to use */
+.reasons-section{
+    padding: 100px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reasons-section h3{
+    text-align: left;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.reason{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 50px;
+    padding-left: 30px;
+}
+.reason-left{
+    position: relative;
+}
+.reason-right{
+    margin: auto;
+}
+.reason-right .custom-btn{
+    width: 400px;
+    color: var(--fg-dark);
+    background-color: var(--bg-default);
+    border: 2px solid var(--blue);
+    padding: 20px;
+    border-radius: 8px;
+    transition: ease-in-out 0.3s;
+}
+.reason-right .custom-btn:hover{
+    background-color: var(--bg-lite);
+}
+
+.reason-box{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--green);
+    width: 20px;
+    height: 100%;
 }

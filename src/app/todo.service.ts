@@ -29,6 +29,11 @@ export class TodoService {
         'id':'3',
         'title':'Make it secure',
         'status':'Yet to start'
+      },
+      {
+        'id':'4',
+        'title':'Make landing page mobile friendly',
+        'status':'Yet to start'
       }
     ];
     this.todoChange.next(this.todos);
