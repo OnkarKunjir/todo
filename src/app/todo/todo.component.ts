@@ -9,17 +9,14 @@ import { TodoService } from '../todo.service';
 export class TodoComponent implements OnInit {
   
   todos = [];
-  constructor(private todoService:TodoService) { }
+  constructor( private todoService:TodoService ) { 
+    this.todoService.todoChange.subscribe( t => {
+      this.todos = t;
+    });
+  }
 
   ngOnInit(): void {
-    this.todos = this.todoService.featchTodo();
+    this.todoService.featchTodo();
   }
     
-  updateTodo(todo): void{
-    this.todos = this.todoService.updateTodo(todo);
-  }
-
-  deleteTodo(todo): void{
-    this.todos = this.todoService.deleteTodo(todo);
-  }
 }

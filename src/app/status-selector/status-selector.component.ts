@@ -14,14 +14,6 @@ export class StatusSelectorComponent implements OnInit {
     "Working",
     "Finished"
   ];
-  // place icons according to optionList
-  // optionListIcons = [
-  //   "hourglass_bottom",
-  //   "psychology",
-  //   "assistant_photo"
-  // ];
-  
-  
   
   optionListIcons : {[key:string]:string}  = {
     "Yet to start" : "hourglass_bottom",

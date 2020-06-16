@@ -5,7 +5,9 @@
         </span>
         <a routerLink="/" class="title-text">TODO</a>
     </div>
-    <!-- <span class="material-icons">
-        add
-    </span> -->
+
+    <div class="search-box nav-item todo-related">
+        <input (input)="search($event)" type="text" placeholder="Search">
+    </div>
+
 </nav>

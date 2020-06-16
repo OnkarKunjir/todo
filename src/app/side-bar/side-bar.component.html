@@ -3,7 +3,7 @@
 
     <ul class="navlinks" id="navlinks">
         <li>
-            <a (click)="updateActive($event)" class="link active" routerLink="/">
+            <a (click)="updateActive()" class="link active" id="home" routerLink="/">
                 <span class="link-icon material-icons">
                     home 
                 </span>
@@ -11,7 +11,7 @@
             </a>
         </li> 
         <li>
-            <a (click)="updateActive($event)" class="link" routerLink="/todo">
+            <a (click)="updateActive()" class="link" id="todo" routerLink="/todo">
                 <span class="link-icon material-icons">
                     format_list_bulleted
                 </span>
@@ -19,7 +19,7 @@
             </a>
         </li>   
         <li>
-            <a (click)="updateActive($event)" class="link" routerLink="/">
+            <a (click)="updateActive()" class="link" id="account" routerLink="/">
                 <span class="link-icon material-icons">
                     person
                 </span>
