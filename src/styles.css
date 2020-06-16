@@ -43,12 +43,14 @@
     --yellow: #ebcb8b;
     --green: #a3be8c;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     background-color: var(--bg-default);
-    scroll-behavior: smooth;
 }
 
 .content{

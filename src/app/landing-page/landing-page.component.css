@@ -1,18 +1,67 @@
+.content{
+    margin-top: 0px;
+    padding-top: 90px;
+}
+.hero{
+    background-image: url('../../assets/hero.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 .text-section{
-    /* background-color: pink; */
     width: 50%;
     margin-right: auto;
-    margin-left: 50px;
     text-align: left;
+    padding-top: 300px;
+    padding-right: 60px;
 }
 .text-section h1{
     font-size: 3rem;
     font-weight: 500;
     padding: 30px 30px 15px 30px;
 }
-
 .text-section p{
     padding: 15px 30px 15px 30px;
     max-width: 650px;
     font-weight: 300;
+}
+.actions{
+    padding: 15px 30px 15px 30px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 400px;
+}
+.custom-btn{
+    cursor: pointer;
+    text-decoration: none;
+    width: 160px;
+    padding: 10px 15px 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 6px;
+    transition: ease-in-out 0.3s;
+}
+#try-now-btn{
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--bg-default);
+}
+#learn-more-btn{
+    margin: auto;
+    color: var(--fg-dark);
+    background-color: var(--bg-default);
+    border: 2px solid var(--blue);
+}
+#learn-more-btn:hover{
+    background-color: var(--bg-lite);
+}
+
+
+/* learn more section */
+#learn-more{
+    min-height: 100vh;
+    background-color: pink;
 }
