@@ -44,10 +44,6 @@ nav a{
 }
 
 .todo-related{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
     margin-right: 30px;
 }
 
