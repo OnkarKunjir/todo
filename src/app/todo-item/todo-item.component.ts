@@ -25,7 +25,12 @@ export class TodoItemComponent implements OnInit {
       status = 'Yet to start';
     }
     this.todo.status = status;
-    this.todoService.updateTodo(this.todo)
+    this.todoService.updateTodo(this.todo);
+  }
+
+  updateTitle(event){
+    this.todo.title = event.target.innerText;
+    this.todoService.updateTodo(this.todo);
   }
 
   onDelete(){

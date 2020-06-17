@@ -6,7 +6,29 @@ import { Observable, Subject } from 'rxjs';
 })
 export class TodoService {
 
-  todos;
+  todos = [
+    {
+      'id':'0',
+      'title':'Finish frontend',
+      'status':'Working'
+    },
+    {
+      'id':'1',
+      'title':'Finish backend',
+      'status':'Yet to start'
+    },
+    {
+      'id':'2',
+      'title':'Make it secure',
+      'status':'Yet to start'
+    },
+    {
+      'id':'3',
+      'title':'Make landing page mobile friendly',
+      'status':'Yet to start'
+    }
+  ];
+  
 
   todoChange: Subject<any> = new Subject<string>();
 
@@ -14,28 +36,6 @@ export class TodoService {
 
   featchTodo(){
     // featch the todos from the server
-    this.todos = [
-      {
-        'id':'1',
-        'title':'Finish frontend',
-        'status':'Working'
-      },
-      {
-        'id':'2',
-        'title':'Finish backend',
-        'status':'Yet to start'
-      },
-      {
-        'id':'3',
-        'title':'Make it secure',
-        'status':'Yet to start'
-      },
-      {
-        'id':'4',
-        'title':'Make landing page mobile friendly',
-        'status':'Yet to start'
-      }
-    ];
     this.todoChange.next(this.todos);
   }
 
@@ -49,6 +49,7 @@ export class TodoService {
     // update status of todo to new status 
     this.todos.map(t=>{
       if(t.id == todo.id){
+        t.title = todo.title;
         t.status = todo.status;
       }
     });
@@ -65,5 +66,22 @@ export class TodoService {
     else{
       this.featchTodo();
     }
+  }
+
+  private getId():string{
+    return this.todos.length.toString();
+  }
+
+  addTodo() : void{
+
+    this.todos.push(
+      {
+        'id': this.getId(),
+        'title':'New todo',
+        'status':'Yet to start'
+      }
+    );
+
+    this.todoChange.next(this.todos);
   }
 }

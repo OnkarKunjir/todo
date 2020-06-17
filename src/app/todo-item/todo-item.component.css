@@ -11,6 +11,7 @@
     font-size: 1.3rem;
     font-weight: 500;
     width: 500px;
+    word-break: break-all;
 }
 .status{
     width: 200px;

@@ -54,10 +54,12 @@ nav a{
 .search-box{
     width: 350px;
     height: 40px;
+    position: relative;
     /* margin-right: 30px; */
 }
 
 .search-box input{
+    position: absolute;
     width: 80%;
     height: 100%;
     background-color: var(--bg-lite);
@@ -67,6 +69,8 @@ nav a{
     border-radius: 100px;
     font-weight: 400;
     transition: width ease-in-out 0.2s;
+    top: 0;
+    right: 0;
 }
 
 .search-box input:focus{

@@ -7,8 +7,8 @@
             check_box
     </span>
 
-    <div class="title">
-        {{ todo.title }}
+    <div class="title" contenteditable="true" (blur)="updateTitle($event)" spellcheck="false">
+        {{ todo.title }} 
     </div>
     
     

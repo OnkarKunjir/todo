@@ -18,5 +18,9 @@ export class TodoComponent implements OnInit {
   ngOnInit(): void {
     this.todoService.featchTodo();
   }
+
+  addTodo():void{
+    this.todoService.addTodo();
+  }
     
 }
