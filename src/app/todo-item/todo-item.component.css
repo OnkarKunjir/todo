@@ -10,10 +10,14 @@
 .title{
     font-size: 1.3rem;
     font-weight: 500;
+    width: 500px;
 }
-.status , .title{
+.status{
+    width: 200px;
+}
+/* .status , .title{
     min-width: 30%;
-}
+} */
 .finish , .delete{
     user-select: none;
     color: var(--bg-dark);

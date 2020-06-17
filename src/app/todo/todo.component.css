@@ -17,6 +17,31 @@ hr{
     font-size: 250px;
     color: var(--bg-dark);
 }
+
+.fab{
+    cursor: pointer;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 10px 10px 10px 0px rgba(136, 136, 136, 0.698);
+    transition: ease-in-out 0.1s;
+}
+.fab:active{
+    transform: scale(0.9);
+}
+.fab p{
+    color: var(--bg-default);
+    user-select: none;
+    font-size: 4rem;
+    position: absolute;
+    text-align: center;
+    left: 15px;
+    top: -17px;
+}
 @media only screen and (max-width: 1000px) {
     .content{
         width: 100vw;

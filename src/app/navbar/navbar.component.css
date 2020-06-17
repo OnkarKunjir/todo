@@ -43,10 +43,18 @@ nav a{
     background-color: var(--bg-dark);
 }
 
+.todo-related{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 30px;
+}
+
 .search-box{
     width: 350px;
     height: 40px;
-    margin-right: 30px;
+    /* margin-right: 30px; */
 }
 
 .search-box input{
@@ -64,6 +72,7 @@ nav a{
 .search-box input:focus{
     width: 100%;
 }
+
 
 @media only screen and (max-width: 1000px) {
     .burger{
