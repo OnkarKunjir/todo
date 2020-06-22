@@ -20,7 +20,7 @@ hr{
 
 .fab{
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     bottom: 50px;
     right: 50px;
     width: 70px;
