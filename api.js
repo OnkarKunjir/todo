@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const todos = [
+let todos = [
     {
       'id':'0',
       'title':'Finish frontend',
@@ -28,15 +28,27 @@ router.get('/featch' , (req , res)=>{
     res.json(todos);
 });
 
+router.post('/add' , (req , res)=>{
+  todos.push(req.body);
+  res.send();
+});
+
 router.put('/update' , (req , res)=>{
-  console.log(req.body);
+  let _todo = req.body;
+  todos.forEach( t => {
+    if(t.id == _todo.id){
+      t.status = _todo.status;
+      t.title = _todo.title;
+    }
+  });
+  res.send(); 
 });
 
-router.delete('/remove' , (req , res)=>{
-
+router.delete('/remove/:id' , (req , res)=>{
+  let _id = req.params.id;
+  todos = todos.filter( t => t.id != _id );
+  console.log(todos);
+  res.send();
 });
-
-
-
 
 module.exports = router;
