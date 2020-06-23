@@ -23,7 +23,7 @@ router.get('/featch' , (req , res)=>{
 });
 
 router.post('/add' , (req , res)=>{
-  // TODO : finish function
+  //TODO :: give user chance to edit title before submitting.
   const new_todo = {
     title : 'New todo',
     status : 'Yet to start'
@@ -33,27 +33,34 @@ router.post('/add' , (req , res)=>{
       console.log('failed to add');
     }
     else{
-      console.log('done');
+      res.send();
     }
   });
-  res.send();
 });
 
 router.put('/update' , (req , res)=>{
-  let _todo = req.body;
-  todos.forEach( t => {
-    if(t.id == _todo.id){
-      t.status = _todo.status;
-      t.title = _todo.title;
+  let todo = req.body;
+  User.updateOne( {email : test_mail , 'todo_list._id' : todo._id} , { 'todo_list.$.title' : todo.title , 'todo_list.$.status' : todo.status } , (err , result)=>{
+    if(err){
+      console.log('failed to modify');
+    }
+    else{
+      res.send();
     }
   });
-  res.send(); 
 });
 
 router.delete('/remove/:id' , (req , res)=>{
-  let _id = req.params.id;
-  todos = todos.filter( t => t.id != _id );
-  res.send();
+  let todo_id = req.params.id;
+  // todos = todos.filter( t => t.id != _id );
+  User.updateOne( {email : test_mail} , {$pull : {todo_list : {_id : todo_id}} } ,  (err , result)=>{
+    if(err){
+      console.log('error while deleting todo');
+    }
+    else{
+      res.send();
+    }
+  });
 });
 
 module.exports = router;

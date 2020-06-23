@@ -16,10 +16,11 @@ export class TodoService {
 
   constructor(private http: HttpClient) { }
 
-  featchTodo(){
+  featchTodo(forced = false){
     // featch the todos from the server
 
-    if(this.todos.length == 0){
+    if(forced || this.todos.length == 0){
+      console.log('called with force');
       this.http.get(this.__base_url + 'api/featch').subscribe(
         data => {
           this.todos = data;
@@ -76,15 +77,13 @@ export class TodoService {
 
   addTodo() : void{
     let new_todo = {
-      'id': this.getId(),
       'title':'New todo',
       'status':'Yet to start'
     };
 
     this.http.post(this.__base_url + 'api/add' , new_todo).subscribe(
       ()=>{
-        this.todos.push(new_todo);
-        this.todoChange.next(this.todos);
+        this.featchTodo(true);
       }
     );
 
