@@ -1,5 +1,9 @@
 const express = require('express');
+
+// route imports 
 const api = require('./routes/api');
+const auth = require('./routes/authenticate');
+
 const app = express();
 const PORT = 8000;
 const __static_dir = './dist/todo-app/';
@@ -8,6 +12,7 @@ const __static_dir = './dist/todo-app/';
 app.use('/' , express.static(__static_dir));
 app.use(express.json());
 app.use('/api' , api);
+app.use('/auth' , auth);
 app.use((req , res)=>{
     // Default route
     // res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
