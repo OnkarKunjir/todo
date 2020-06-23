@@ -1,5 +1,5 @@
 const express = require('express');
-const api = require('./api');
+const api = require('./routes/api');
 const app = express();
 const PORT = 8000;
 const __static_dir = './dist/todo-app/';

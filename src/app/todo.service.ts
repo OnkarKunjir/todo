@@ -35,9 +35,9 @@ export class TodoService {
 
   deleteTodo(todo){
     // delete todo form list and then send request to server
-    this.http.delete(this.__base_url + 'api/remove/' + todo.id).subscribe(
+    this.http.delete(this.__base_url + 'api/remove/' + todo._id).subscribe(
       ()=>{
-        this.todos = this.todos.filter( t => t.id != todo.id );
+        this.todos = this.todos.filter( t => t._id != todo._id );
         this.todoChange.next(this.todos);
       }
     );
@@ -48,7 +48,7 @@ export class TodoService {
     this.http.put(this.__base_url + 'api/update' , todo).subscribe(
       () =>{
         this.todos.map(t=>{
-          if(t.id == todo.id){
+          if(t._id == todo._id){
             t.title = todo.title;
             t.status = todo.status;
           }
@@ -60,7 +60,6 @@ export class TodoService {
   }
 
   search(query){
-    // INCOMPLETE
     if(query.length > 0){
       let re = new RegExp(query , 'i');
       let temp = this.todos.filter( t =>  t.title.search(re) > -1 );
