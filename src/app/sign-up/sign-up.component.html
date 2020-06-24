@@ -1,1 +1,40 @@
-<p class="content">sign-up works!</p>
+<div class="content">
+    <div class="sign-in-form">
+        <div class="form-element title">
+            <h2>Sign in</h2>
+        </div>
+        <div class="form-element">
+            <input type="email" placeholder="Email" [formControl]="sign_in_email">
+        </div>
+        <div class="form-element">
+            <input type="password" placeholder="Password" [formControl]="sign_in_password">
+        </div>
+        <div (click)="toggle()" class="form-element toggle">
+            Create new account
+        </div>
+        <div class="form-element button-group">
+            <button class="clear-btn">Clear</button>
+            <button (click)="login()" class="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="sign-up-form hidden">
+        <div class="form-element title">
+            <h2>Sign Up</h2>
+        </div>
+        <div class="form-element">
+            <input type="email" placeholder="Email" [formControl]="sign_up_email">
+        </div>
+        <div class="form-element">
+            <input type="password" placeholder="Password" [formControl]="sign_up_password">
+        </div>
+        <div (click)="toggle()" class="form-element toggle">
+            Alredy have a account
+        </div>
+        <div class="form-element button-group">
+            <button class="clear-btn">Clear</button>
+            <button (click)="signup()" class="submit-btn">Submit</button>
+        </div>
+    </div>
+
+</div>

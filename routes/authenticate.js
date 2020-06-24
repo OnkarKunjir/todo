@@ -29,9 +29,9 @@ router.post('/sign_up' , async (req , res)=>{
     
     // generating token
     const token  = jwt.sign( {email : user.email} , process.env.JWT_SECRET );
-    res.header('auth-token' , token);
+    // res.header('auth-token' , token);
     
-    res.send(token);
+    res.send({'auth-token' : token});
 });
 
 
@@ -46,13 +46,13 @@ router.post('/login' , async (req , res)=>{
 
 
     // validate user password
-    const valid = bcrypt.compare(value.password , user.password);
+    const valid = await bcrypt.compare(value.password , user.password);
     if( !valid ) return res.status(400).send('username or password not correct');
 
     // generating token
     const token  = jwt.sign( {email : user.email} , process.env.JWT_SECRET );
-    res.header('auth-token' , token);
-    res.send(token);
+    // res.header('auth-token' , token);
+    res.send({'auth-token' : token});
 
 });
 

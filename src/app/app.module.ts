@@ -13,6 +13,7 @@ import { TodoItemComponent } from './todo-item/todo-item.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { StatusSelectorComponent } from './status-selector/status-selector.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,67 @@
+.content{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sign-in-form , .sign-up-form{
+    top: 40%;
+    left: 50%;
+    width: 60%;
+    max-width: 600px;
+    transform: translate(-50% , -40%);
+    position: absolute;
+    /* border: 1px solid var(--bg-dark); */
+}
+.form-element.title{
+    text-align: center;
+    color: var(--fg-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.form-element{
+    width: 90%;
+    margin: auto;
+    margin: 20px 10px;
+}
+.form-element input{
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: var(--bg-lite);
+    border: 1px solid var(--bg-mid);
+    color: var(--fg-dark);
+    border-radius: 5px;
+}
+
+.form-element.toggle{
+    text-decoration: underline;
+    color: var(--fg-lite);
+    cursor: pointer;
+    user-select: none;
+}
+
+button{
+    user-select: none;
+    width: 150px;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--blue);
+    transition: ease-in-out 0.3s;
+}
+.clear-btn{
+    background-color: var(--bg-default);
+    color: var(--fg-dark);
+}
+.clear-btn:hover{
+    background-color: var(--bg-lite);
+}
+.submit-btn{
+    background-color: var(--blue);
+    color: var(--bg-default);
+}

@@ -11,6 +11,7 @@ export class TodoService {
 
   todos:any = [];
   __base_url = 'http://localhost:8000/';
+  token = localStorage.getItem('auth-token');
 
   todoChange: Subject<any> = new Subject<string>();
 
@@ -20,8 +21,7 @@ export class TodoService {
     // featch the todos from the server
 
     if(forced || this.todos.length == 0){
-      console.log('called with force');
-      this.http.get(this.__base_url + 'api/featch').subscribe(
+      this.http.get(this.__base_url + 'api/featch' , { headers : { 'auth-token' : this.token } }).subscribe(
         data => {
           this.todos = data;
           this.todoChange.next(this.todos);
@@ -36,7 +36,7 @@ export class TodoService {
 
   deleteTodo(todo){
     // delete todo form list and then send request to server
-    this.http.delete(this.__base_url + 'api/remove/' + todo._id).subscribe(
+    this.http.delete(this.__base_url + 'api/remove/' + todo._id , { headers : { 'auth-token' : this.token } }).subscribe(
       ()=>{
         this.todos = this.todos.filter( t => t._id != todo._id );
         this.todoChange.next(this.todos);
@@ -46,7 +46,7 @@ export class TodoService {
 
   updateTodo(todo){
     // update status of todo to new status 
-    this.http.put(this.__base_url + 'api/update' , todo).subscribe(
+    this.http.put(this.__base_url + 'api/update' , todo , { headers : { 'auth-token' : this.token } }).subscribe(
       () =>{
         this.todos.map(t=>{
           if(t._id == todo._id){
@@ -81,7 +81,7 @@ export class TodoService {
       'status':'Yet to start'
     };
 
-    this.http.post(this.__base_url + 'api/add' , new_todo).subscribe(
+    this.http.post(this.__base_url + 'api/add' , new_todo , { headers : { 'auth-token' : this.token } }).subscribe(
       ()=>{
         this.featchTodo(true);
       }
