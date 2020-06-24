@@ -24,6 +24,9 @@ export class TodoService {
         data => {
           this.todos = data;
           this.todoChange.next(this.todos);
+        },
+        err => {
+          console.log(err.error);
         }
       );  
     }
@@ -39,6 +42,9 @@ export class TodoService {
       ()=>{
         this.todos = this.todos.filter( t => t._id != todo._id );
         this.todoChange.next(this.todos);
+      },
+      err => {
+        window.alert('Failed to delete todo');
       }
     );
   }
@@ -54,6 +60,9 @@ export class TodoService {
           }
         });
         this.todoChange.next(this.todos);
+      },
+      err =>{
+        window.alert('Failed to update todo');
       }
     );
    
@@ -83,6 +92,9 @@ export class TodoService {
     this.http.post(this.__base_url + 'api/add' , new_todo ).subscribe(
       ()=>{
         this.featchTodo(true);
+      },
+      err =>{
+        window.alert('Failed to add todo');
       }
     );
 

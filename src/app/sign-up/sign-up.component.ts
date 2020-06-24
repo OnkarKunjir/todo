@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sign-up',
@@ -14,7 +16,7 @@ export class SignUpComponent implements OnInit {
   sign_up_email = new FormControl('');
   sign_up_password = new FormControl('');
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient , private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -32,7 +34,12 @@ export class SignUpComponent implements OnInit {
 
     this.http.post('http://localhost:8000/auth/login' , user).subscribe(
       () =>{
-        // localStorage.setItem('auth-token' , resp['auth-token']);
+        this.router.navigate(['todo']);
+      },
+      err =>{
+        if(err){
+          window.alert(err.error);
+        }
       }
     );
 
@@ -45,8 +52,12 @@ export class SignUpComponent implements OnInit {
     };
     this.http.post('http://localhost:8000/auth/sign_up' , user).subscribe(
       () =>{
-        // localStorage.setItem('auth-token' , resp['auth-token']);
-        // console.log('account created');
+        this.router.navigate(['todo']);
+      },
+      err =>{
+        if(err){
+          window.alert(err.error);
+        }
       }
     );
 
