@@ -31,6 +31,7 @@ router.post('/sign_up' , async (req , res)=>{
     const token  = jwt.sign( {email : user.email} , process.env.JWT_SECRET );
     // res.header('auth-token' , token);
     res.cookie( 'token' , token , {httpOnly : true , sameSite : 'lax'} );
+    res.cookie( 'connected' , 'true' , {sameSite : 'lax'} );
     res.status(200).send();
 });
 
@@ -53,6 +54,8 @@ router.post('/login' , async (req , res)=>{
     const token  = jwt.sign( {email : user.email} , process.env.JWT_SECRET );
     // res.header('auth-token' , token);
     res.cookie( 'token' , token , {httpOnly : true , sameSite : 'lax'} );
+    res.cookie( 'connected' , 'true' , {sameSite : 'lax'} );
+
     res.status(200).send();
 });
 
