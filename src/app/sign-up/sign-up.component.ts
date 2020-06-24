@@ -20,7 +20,6 @@ export class SignUpComponent implements OnInit {
   }
 
   toggle(): void{
-    // this.sign_in_visible = !this.sign_in_visible;
     document.querySelector('.sign-in-form').classList.toggle('hidden');
     document.querySelector('.sign-up-form').classList.toggle('hidden');
   }
@@ -32,8 +31,8 @@ export class SignUpComponent implements OnInit {
     };
 
     this.http.post('http://localhost:8000/auth/login' , user).subscribe(
-      resp =>{
-        localStorage.setItem('auth-token' , resp['auth-token']);
+      () =>{
+        // localStorage.setItem('auth-token' , resp['auth-token']);
       }
     );
 
@@ -45,9 +44,9 @@ export class SignUpComponent implements OnInit {
       password : this.sign_up_password.value
     };
     this.http.post('http://localhost:8000/auth/sign_up' , user).subscribe(
-      resp =>{
-        localStorage.setItem('auth-token' , resp['auth-token']);
-        console.log('account created');
+      () =>{
+        // localStorage.setItem('auth-token' , resp['auth-token']);
+        // console.log('account created');
       }
     );
 

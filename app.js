@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 
 // route imports 
 const api = require('./routes/api');
@@ -11,6 +12,7 @@ const __static_dir = './dist/todo-app/';
 // serving static files
 app.use('/' , express.static(__static_dir));
 app.use(express.json());
+app.use(cookieParser());
 app.use('/api' , api);
 app.use('/auth' , auth);
 app.use((req , res)=>{
